@@ -23,8 +23,8 @@ const EtaItem = ({ id, eta }: { id: string; eta: number }) => {
 
   return (
     <>
-      <section className="fixed top-0 left-0 bg-opacity-50 z-50 bg-clay w-[390px] min-h-[844px] h-full overflow-y-auto font-fira-sans pb-4">
-        <div className="pt-[97px]">
+      <section className="fixed top-0 left-0 bg-opacity-50 z-50 bg-clay min-w-[390px] w-full min-h-[844px] h-full overflow-y-auto font-fira-sans">
+        <div className="pt-[97px] mx-auto justify-center flex">
           <img src={foo} alt="your food is cooking!" />
         </div>
         <div className="px-4">
@@ -37,7 +37,7 @@ const EtaItem = ({ id, eta }: { id: string; eta: number }) => {
             </p>
             <span className="text-ash">{id}</span>
           </div>
-          <footer className="flex flex-col gap-4 pt-[46px]">
+          <footer className="flex flex-col gap-4 pt-[46px] max-w-[430px] mx-auto">
             <button
               onClick={handleShowReceipt}
               className="rounded-[4px] text-snow border-2 text-[24px] border-snow uppercase h-[77px] w-full trackijng-wider font-bold opacity-80 "

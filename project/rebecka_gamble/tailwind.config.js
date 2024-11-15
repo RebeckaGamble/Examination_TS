@@ -12,7 +12,6 @@ export default {
         'snow': '#F4F3F1',
         'alert': 'rgba(235, 87, 87, 1)',
         'dark-mint': 'rgba(72, 144, 120, 1)',
-
         'clay': 'rgba(96, 88, 88, 1)',
         'coal': 'rgba(53, 49, 49, 1)',
         'shade-24-light': 'rgba(241, 240, 236, 0.24)',

@@ -18,7 +18,7 @@ export async function postOrder(
         }),
       });
       const result = await response.json();
-      console.log("order posted: ", result);
+    //   console.log("order posted: ", result);
       if (result) {
         return {
           id: result.order.id,

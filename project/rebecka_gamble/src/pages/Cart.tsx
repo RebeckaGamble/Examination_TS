@@ -29,7 +29,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="bg-ash min-h-[844px] h-auto w-[390px] px-4 relative">
+      <div className="bg-ash min-h-[844px] h-auto min-w-[390px] w-auto max-w-[430px] px-4 pb-4 relative">
         <section className="relative flex justify-end pt-[17px] rounded-[4px]">
           <div className="h-[64px] w-[64px] flex items-center justify-center">
             <Link to={"/"}>

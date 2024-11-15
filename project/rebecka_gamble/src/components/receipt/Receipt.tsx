@@ -5,8 +5,8 @@ import { ReceiptProps } from "../../types";
 
 const Receipt = ({ id, orderValue, items }: ReceiptProps) => {
   return (
-    <section className="fixed top-0 left-0 bg-clay px-4 w-[390px] pt-[165px] min-h-[844px] h-full overflow-y-auto font-fira-sans z-[9999]">
-      <div className="bg-ash flex flex-col justify-center rounded-[4px]">
+    <section className="fixed top-0 left-0 bg-clay px-4 min-w-[390px] w-full pt-[165px] min-h-[844px] h-full overflow-y-auto font-fira-sans z-[9999]">
+      <div className="bg-ash flex flex-col justify-center rounded-[4px] max-w-[430px] mx-auto">
         <section className="flex flex-col gap-[10px] pt-[32px]">
           <img
             className="w-[41.75px] h-[50.17px] mx-auto"
@@ -45,7 +45,7 @@ const Receipt = ({ id, orderValue, items }: ReceiptProps) => {
       </div>
       <Link
         to={"/"}
-        className="rounded-[4px] mt-[73px] mb-[24px] items-center flex justify-center text-center text-[24px] tracking-wider font-bold h-[77px] w-full bg-coal text-snow uppercase"
+        className="rounded-[4px] mt-[73px] mb-[24px] max-w-[430px] mx-auto items-center flex justify-center text-center text-[24px] tracking-wider font-bold h-[77px] w-full bg-coal text-snow uppercase"
       >
         Gör en ny beställning
       </Link>

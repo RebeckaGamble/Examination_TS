@@ -58,27 +58,28 @@ const ShowMenu = () => {
         Meny
       </h1>
 
-      <ul className=" text-snow flex flex-col w-[358px]">
+      <ul className=" text-snow flex flex-col min-w-[358px]">
         {wontonItems.map((item, index) => (
-          <WontonMenuItem
-            key={item.id}
-            name={item.name}
-            price={item.price}
-            ingredients={item.ingredients}
-            id={item.id}
-            type={item.type}
-            //set darker bg when item is focused
-            isFocused={focusedWontonId === item.id}
-            onFocus={() => setFocusedWontonId(item.id)}
-            //make first(top) and last(bottom) corners rounded
-            className={`${index === 0 ? "rounded-t-[8px]" : ""} ${
-              index === wontonItems.length - 1 ? "rounded-b-[8px]" : ""
-            }`}
-          />
+          <li key={item.id} className="list-none">
+            <WontonMenuItem
+              name={item.name}
+              price={item.price}
+              ingredients={item.ingredients}
+              id={item.id}
+              type={item.type}
+              //set darker bg when item is focused
+              isFocused={focusedWontonId === item.id}
+              onFocus={() => setFocusedWontonId(item.id)}
+              //make first(top) and last(bottom) corners rounded
+              className={`${index === 0 ? "rounded-t-[8px]" : ""} ${
+                index === wontonItems.length - 1 ? "rounded-b-[8px]" : ""
+              }`}
+            />
+          </li>
         ))}
       </ul>
       {dipItems.length > 0 && (
-        <section className="rounded-[8px] text-snow w-[358px] flex flex-col bg-clay space-y-4 p-4">
+        <section className="rounded-[8px] text-snow min-w-[358px] flex flex-col bg-clay space-y-4 p-4">
           <p className="font-bold leading-[26.4px] font-fira-sans text-[22px] flex flex-row justify-between ">
             <span>Dipsås</span>
             <span className="flex-grow mb-[6px] border-dotted border-b-2 border-gray-400 mx-2 "></span>
@@ -87,21 +88,22 @@ const ShowMenu = () => {
           </p>
           <ul className="flex flex-wrap gap-4">
             {dipItems.map((item) => (
-              <DipDrinkMenuItem
-                key={item.id}
-                id={item.id}
-                name={item.name}
-                price={item.price}
-                type={item.type}
-                isFocused={focusedDipId === item.id}
-                onFocus={() => setFocusedDipId(item.id)}
-              />
+              <li key={item.id} className="list-none">
+                <DipDrinkMenuItem
+                  id={item.id}
+                  name={item.name}
+                  price={item.price}
+                  type={item.type}
+                  isFocused={focusedDipId === item.id}
+                  onFocus={() => setFocusedDipId(item.id)}
+                />
+              </li>
             ))}
           </ul>
         </section>
       )}
       {drinkItems.length > 0 && (
-        <section className="rounded-[8px] text-snow w-[358px] flex flex-col bg-clay space-y-4 p-4">
+        <section className="rounded-[8px] text-snow min-w-[358px] flex flex-col bg-clay space-y-4 p-4">
           <p className="font-bold leading-[26.4px] font-fira-sans text-[22px] flex flex-row justify-between ">
             <span>Dricka</span>
             <span className="flex-grow mb-[6px] border-dotted border-b-2 border-gray-400 mx-2 "></span>

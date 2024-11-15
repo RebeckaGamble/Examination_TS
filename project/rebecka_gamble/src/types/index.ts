@@ -4,27 +4,27 @@ export type MenuItemProps = {
   name: string;
   price: number;
   ingredients?: string[];
-  type: "wonton" | "dip" | "drink";
+  type?: "wonton" | "dip" | "drink";
 };
 
 export type Wonton = MenuItemProps & {
   type: "wonton";
   ingredients: string[] | undefined;
   isFocused: boolean;
-  onFocus: () => void;
+  onFocus: (event: React.FocusEvent<HTMLButtonElement>) => void;
   className?: string;
 };
 
 export type Dip = MenuItemProps & {
   type: "dip";
   isFocused: boolean;
-  onFocus: () => void;
+  onFocus: (event: React.FocusEvent<HTMLButtonElement>) => void;
 };
 
 export type Drink = MenuItemProps & {
   type: "drink";
   isFocused: boolean;
-  onFocus: () => void;
+  onFocus: (event: React.FocusEvent<HTMLButtonElement>) => void;
 };
 
 export type MenuItems = Wonton | Dip | Drink;
@@ -42,6 +42,7 @@ export type Item = {
   id: string;
   eta?: string;
   name: string;
+  // type?: "wonton" | "dip" | "drink";
   quantity: number;
   price: number;
   timestamp?: string;

@@ -5,7 +5,7 @@ type CartFooterProps = {
 
 const CartFooter = ({ totalOrderPrice, onOrder }: CartFooterProps) => {
   return (
-    <footer className="space-y-4 w-full font-fira-sans pt-10">
+    <footer className="space-y-4 w-auto font-fira-sans pt-10">
       <section className="rounded-[4px] p-4 w-full flex flex-col bg-shade-24-dark text-coal">
         <div className="justify-between flex w-full">
           <div className="flex flex-col">

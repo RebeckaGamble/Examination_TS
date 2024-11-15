@@ -6,7 +6,7 @@ function App() {
   const { showItemsInCart } = useCart();
 
   return (
-    <main className="bg-dark-mint px-4 flex-1 w-[390px] min-h-[1068px]">
+    <main className="bg-dark-mint px-4 flex-1 min-w-[390px] w-full max-w-[430px] min-h-[1068px]">
       <section className="relative h-[112px] w-full flex justify-end pt-[17px] rounded-[4px]">
         <Link
           className="h-[64px] w-[64px] rounded-[4px] items-center justify-center flex bg-snow"
